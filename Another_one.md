@@ -13,7 +13,7 @@ Plus some context clues:
 
 Your mission: Find the key and hash it.
 
----
+--
 
 ## The Investigation
 
