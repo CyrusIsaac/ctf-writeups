@@ -8,7 +8,7 @@ We were given a seemingly innocuous text file that appeared to contain nothing m
 
 When I first examined the file with a hex dump (`od -c`), I noticed something suspicious: the file contained an unusually high number of **spaces and tabs**. This immediately pointed to **whitespace steganography** — a technique where data is encoded using spaces and tabs.
 
-```
+``
   \t  \t  \t  \t  \t  \t  \t
 # \t\t \t\t\t  \t\t \t\t\t\t \t\t\t  \t  \t\t \t  \t
 ```
