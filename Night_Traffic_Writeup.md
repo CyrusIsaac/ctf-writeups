@@ -1,6 +1,6 @@
 # CTF Writeup: Night Traffic (DNS Breadcrumbs)
 
-## Challenge Overview
+## Challenge Overview 
 
 **Challenge Name:** Night Traffic  
 **Difficulty:** Medium  
