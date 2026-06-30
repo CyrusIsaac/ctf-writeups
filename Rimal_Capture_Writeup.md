@@ -1,5 +1,5 @@
 # Rimal Capture — Forensics Writeup
-
+ 
 ## Challenge Details
 
 - **Challenge Name:** Rimal Capture
