@@ -1,0 +1,90 @@
+# NHNC CTF - Boarding Gate (OSINT/Forensics)
+
+## Challenge
+
+On the last day of the trip, I stood in front of the boarding gate, ready to board my flight home.
+
+That day in Japan marked the end of Golden Week, and the airport was packed with travelers preparing to return home.
+
+Before boarding, I took a photo of the aircraft in front of me; it was the flight I was about to take.
+
+Find:
+
+- Date the photo was taken
+- IATA flight number
+
+Flag format:
+
+`NHNC{YYYYMMDD_FLIGHT}`
+
+---
+
+# Solution
+
+## Step 1 – Extract EXIF metadata
+
+I first inspected the image metadata using **ExifTool**.
+
+```bash
+exiftool image.jpg
+```
+
+From the EXIF metadata I obtained the image creation **date and time**.
+
+The metadata showed that the image was taken on:
+
+```
+2026-05-05
+```
+
+This also matches the challenge clue mentioning the **last day of Golden Week**.
+
+Date:
+
+```
+20260505
+```
+
+---
+
+## Step 2 – Identify the aircraft
+
+From the image:
+
+- Airline: Jetstar Japan
+- Aircraft: Airbus A320
+- Registration: JA06JJ
+
+---
+
+## Step 3 – Find the flight
+
+I searched Google for the aircraft registration together with the date:
+
+```text
+JA06JJ 2026-05-05
+```
+
+The aircraft history showed the scheduled flight for that day.
+
+The corresponding **IATA flight number** was:
+
+```
+GK55
+```
+
+---
+
+## Final Flag
+
+```text
+NHNC{20260505_GK55}
+```
+
+---
+
+# Tools Used
+
+- ExifTool
+- Google
+- Aircraft registration lookup websites
